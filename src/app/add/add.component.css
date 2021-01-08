@@ -1,0 +1,16 @@
+.container{
+    background-color: aqua;
+    padding-left: 400px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container .btn{
+    background-color: #deb887;
+    margin-left: 100px;
+}
+.xyz{
+    margin-left: 14px;
+}
+.container .span .p{
+    text-align: right;
+}

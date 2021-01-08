@@ -1,0 +1,25 @@
+<br>
+<br>
+
+<table class="table">
+	<thead class="thead-dark">
+	  <tr>
+		<th scope="col">Id</th>
+		<th scope="col">Name</th>
+		<th scope="col">Age</th>
+		<th scope="col">Edit</th>
+		<th scope="col">Delete</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr *ngFor="let ans of allUsers">
+		<th scope="row">{{ans.id}}</th>
+		<td>{{ans.name}}</td>
+		<td>{{ans.age}}</td>
+		<!-- <td><a href="/edit/{{ans.id}}">Edit</a></td> -->
+		<td><input class='myclass' type='button' value='Edit' (click)="EditUser(ans)"/></td>
+		<td><a href="/delete/{{ans.id}}">Delete</a></td>
+		<!-- <td><input class='myclass' type='button' value='Delete' (click)="DeleteUser($delete,ans.id)"/></td> -->
+	  </tr>
+	</tbody>
+  </table>  

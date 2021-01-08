@@ -1,0 +1,37 @@
+<br>
+<br>
+<section id="form">
+<div class="container">
+    <form action="#" [formGroup]="addForm" (ngSubmit)="addData(addForm)" #addUser>
+        Name : <input type="name" placeholder="Enter Name" formControlName="name">
+            <div *ngIf="addForm.controls['name'].touched && !addForm.controls['name'].valid">
+                        
+            <span *ngIf="addForm.controls['name'].hasError('required')">
+                Name is required
+            </span>
+            <span *ngIf="addForm.controls['name'].hasError('minlength')">
+                Name must be at least 2 characters long
+            </span>
+            </div>
+            <br>
+            <br>
+            <div class="xyz">
+        Age : <input type="age"  placeholder="Enter Age" formControlName="age">
+        <div *ngIf="addForm.controls['age'].touched && !addForm.controls['age'].valid">
+                        
+            <span *ngIf="addForm.controls['age'].hasError('required')">
+                Age is required
+            </span>
+            <span *ngIf="addForm.controls['age'].hasError('pattern')">
+                Only 2 digit is accepted
+            </span>
+            </div>
+            </div>
+            <br>
+            <br>
+            <button type="Submit "  class="btn" [disabled]="!addForm.valid">Submit</button>
+            {{addForm.valid}}
+    </form>
+    {{msg}}
+</div>
+</section>
